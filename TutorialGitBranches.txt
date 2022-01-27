@@ -1,0 +1,19 @@
+Continuando o tutorial para exemplificar como funcionam as ramificações
+
+Inserindo uma branch:
+1- Escreva: git checkout -b "Branch1"
+2- Pressione "Enter"
+*criando uma pasta de ramificação do projeto
+3- Escreva: git add .
+*Este comando seleciona todas os arquivos da pasta atual 
+4- Escreva: git commit -m "Envio para a Branch1"
+5- Escreva: git push origin Branch1
+*repare que estamos enviando para a pasta de ramificação criada
+
+Caso queira inserir arquivos enviados em algum branch ou atualizar o arquivo escrito na main, usar o merge:
+1- Escreva: git checkout main
+*se estiver na ramificação criada onde estava desenvolvendo
+2- Escreva: git merge Branch1
+*As alterações em cada pasta estarão configuradas para o merge
+3- Escreva: git push origin main
+*Envio para a pasta main com todas as alterações.
