@@ -1,0 +1,93 @@
+Arquivo utilizado para uso teste de GitBash.
+
+Siga as instruções:
+
+Inicie o Git Bash:
+1- Escreva: git init
+2- Pressione a tecla "ENTER"
+*será criado uma pasta .git dentro do repositório/pasta
+
+Abra o Git bash para a pasta onde se encontra este arquivo:
+1- Basta abrir a pasta e clicar com o botão direito do mouse
+2- Selecione a opção "GitBash here"
+*- Repare se a pasta já está considerada como (master) no endereço do Git
+
+Para atrelar sua conta no GitHub com o GitBash para o envio de arquivos:
+1- Escreva: git config --global user.email "SeuEmail"
+2- Escreva: git config --global user.name "NomedeUsuario"
+*Caso queira atrelar uma outra conta apenas para a pasta em questão: 
+	retire "--global" 
+
+Indique o arquivo para o envio:
+1- Escreva: git add TutorialGit.txt
+2- Pressione a tecla "ENTER"
+*mudar o nome do TutorialGit.txt para qual arquivo deseja enviar para o git
+
+Para adicionar todos os arquivos:
+1-Escreva: git add .
+
+Para remover
+git rm --cached TutorialGitBranches.txt
+
+Cheque o estado do arquivo com o comando:
+1- Escreva: git status
+2- Pressione a tecla "ENTER"
+*irá informar os arquivos presentes no diretório não identificados
+*Quais foram identificados pelo "git add" e estão para serem enviados (commit)
+*Também irá informar se há arquivos para o commit
+
+Preparando arquivos selecionados para o envio:
+1- Escreva: git commit -m "texto"
+*pode ser qualquer texto sua mensagem, serve para indicar o upload
+
+##Enviando para uma main
+
+Tornar o master em uma main:
+1- Escreva: git branch -M "main"
+2- Pressione "ENTER"
+
+Identificar a pasta virtual no site do Github para envio de arquivos:
+1- Escreva: git remote add origin link
+2- Pressione a tecla "ENTER"
+*Substitua o link pelo endereço do repositório
+*como obter o endereço: vá para a pasta do repositório, aperte no botão 'code'
+*aperte no íncone de copiar ao lado do link em https
+*cole com "shift"+"insert"
+
+Envio de arquivo para a pasta online:
+1- Escreva: git push -u origin main
+2- Pressione "ENTER"
+
+##Enviando para uma master
+
+============================
+Abra o arquivo "TutorialGitBranches.txt" para continuar o tutorial e aprender a trabalhar com ramificações do diretório
+
+Inserindo uma branch:
+1- Escreva: git checkout -b "Branch1"
+2- Pressione "Enter"
+*criando uma pasta de ramificação do projeto
+3- Escreva: git add TutorialGit.txt 
+4- Escreva: git commit -m "Envio para a Branch1"
+5- Escreva: git push origin Branch1
+*repare que estamos enviando para a pasta de ramificação criada
+
+Caso queira inserir arquivos enviados em algum branch ou atualizar o arquivo escrito na main, usar o merge:
+1- Escreva: git checkout main
+*se estiver na ramificação criada onde estava desenvolvendo
+2- Escreva: git merge Branch1
+*As alterações em cada pasta estarão configuradas para o merge
+3- Escreva: git push origin main
+*Envio para a pasta main com todas as alterações.
+
+
+============================
+
+Baixar uma pasta online do github:
+1- Escreva: git clone nomedapasta
+
+
+================
+
+Atualizar a pasta a partir de uma pasta online de seu repositório
+1-Escreva: git pull 
